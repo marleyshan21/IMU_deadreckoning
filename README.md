@@ -29,21 +29,21 @@ This step was done to negate the effects of interference due to nearby ferromagn
 materials that influence the magnetic field but do not necessarily produce one (soft iron calibration).
 
 <p align="center">
-<img src="./images/mag_hard_soft.png" width="480" height="300">
+<img src="./images/mag_hard_soft.png" width="640" height="360">
 </p>
 
 3. Complementary Filter:
 A complementary filter was implemented to combine magnetometer and gyroscope data, providing a more accurate estimate of the sensor's orientation.
 
 <p align="center">
-<img src="./images/LPF_CF.png" width="480" height="300">
+<img src="./images/LPF_CF.png" width="640" height="360">
 </p>
 
 4. Dynamic Bias Removal:
  During data collection, the car occasionally stopped in traffic, resulting in zero velocity regions on the GPS velocity plots. However, the acceleration readings showed noisy data during those intervals. As the acceleration was integrated, the velocity increased uncontrollably. This was solved by dynamically calculating the bias correction using GPS velocity.
 
 <p align="center">
-<img src="./images/accel_bias.png" width="480" height="300">
+<img src="./images/accel_bias.png"width="640" height="360">
 </p>
 
 
@@ -51,7 +51,7 @@ A complementary filter was implemented to combine magnetometer and gyroscope dat
 Velocity and position were calculated by integrating acceleration and velocity, respectively. The position was initialized at (0,0), and the velocity was initialized with the first GPS velocity reading. The IMU and GPS trajectories were analyzed to determine the error in IMU dead reckoning and understand the drift in the IMU data.
 
 <p align="center">
-<img src="./images/traj_gps.png" width="480" height="300">
+<img src="./images/traj_gps.png" width="640" height="360">
 </p>
 
 
